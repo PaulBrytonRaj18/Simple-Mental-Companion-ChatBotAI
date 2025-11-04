@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ app_name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="title">Mira</div>
+        <div class="subtitle">Your calm, compassionate AI companion</div>
+      </header>
+
+      <main class="chat-container">
+        <div id="chat" class="chat-window"></div>
+        <form id="chat-form" class="chat-input" autocomplete="off">
+          <input id="message" type="text" placeholder="Share what's on your mind..." aria-label="Your message" required />
+          <button id="send" type="submit">Send</button>
+        </form>
+      </main>
+
+      <footer class="app-footer">
+        <span>Built for care, not diagnosis. If you're in crisis, please reach out to someone you trust or a local helpline.</span>
+      </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+  </html>
+
+
