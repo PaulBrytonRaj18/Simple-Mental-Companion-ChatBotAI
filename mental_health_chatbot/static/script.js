@@ -84,4 +84,18 @@ formEl.addEventListener('submit', (e) => {
   sendMessage(text);
 });
 
+inputEl.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    formEl.dispatchEvent(new Event('submit'));
+  }
+});
+
+// Welcome message on load
+window.addEventListener('load', () => {
+  appendMessage('assistant', "Hello! I'm Mira, your mental health companion. How are you feeling today?");
+});
+
+
+
 
