@@ -96,6 +96,24 @@ window.addEventListener('load', () => {
   appendMessage('assistant', "Hello! I'm Mira, your mental health companion. How are you feeling today?");
 });
 
+const themeToggleBtn = document.getElementById('theme-toggle');
+themeToggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+});
 
+const theme = localStorage.getItem('theme');
+if (theme === 'dark') {
+  document.body.classList.add('dark-theme');
+}
 
-
+document.body.addEventListener('classchange', () => {
+  if (document.body.classList.contains('dark-theme')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
+const observer = new MutationObserver(() => {
+  document.body.dispatchEvent(new Event('classchange'));
+});
+observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });  
