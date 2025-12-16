@@ -31,8 +31,8 @@ A gentle, empathetic AI companion named Mira that chats with users about their f
    - On macOS/Linux:
      ```bash
      export GOOGLE_API_KEY=YOUR_API_KEY
-     export GEMINI_MODEL=gemini-2.5-flash   # optional, defaults to this
-     export FLASK_SECRET_KEY=change-me      # optional
+     export GEMINI_MODEL=gemini-2.5-flash   
+     export FLASK_SECRET_KEY=change-me     
      ```
    - On Windows (PowerShell):
      ```powershell
